@@ -5,4 +5,4 @@ Esta web es una mejora de la pagina web presentada para la venta de vehiculos de
 
 
 ## Prototipo basico:
-<img src="https://imgur.com/ErhOj8y" alt="Prototipo 1">
+<img src="https://i.imgur.com/ErhOj8y.png" alt="Prototipo 1">
