@@ -11,7 +11,9 @@
 .noticia-card {
   background-color: #211F29; /* gris claro */
   border: 1px solid #ffc600;/* borde gris suave */
-  border-radius: 10px;
+
+  border-radius: 5px;
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -22,6 +24,16 @@
   background-color: #211F29;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+
+
+.noticia-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
 
 .color-blanco-text {
     color: #ffffff; /* Cambia el color del texto*/
@@ -34,15 +46,11 @@
   font-style: normal;
 }
 
-
-
 .barra-horizontal {
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   background-color: #211F29;
   padding: 10px 0;
 }
-
-
 
 .menu-horizontal {
   display: flex;
@@ -86,7 +94,12 @@
     min-height: calc(100vh - 250px); /* ocupa el resto */
 }
 
-
+.fila-catalogo {
+    background-color: #141318; /* mismo color del fondo */
+    min-height: calc(100% - 250px); /* ocupa el resto vertical */
+    width: 100vw; /* ocupa todo el ancho de la pantalla */
+    overflow-x: auto; /* scroll horizontal si es necesario */
+}
 
 /* Botones
     Orden:
