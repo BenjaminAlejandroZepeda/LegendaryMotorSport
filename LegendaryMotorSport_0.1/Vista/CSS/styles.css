@@ -1,0 +1,167 @@
+
+
+.fondo {
+  background-color: #211F29;
+}
+
+
+/* Estilo Letra Montserrat */
+
+
+.noticia-card {
+  background-color: #211F29; /* gris claro */
+  border: 1px solid #ffc600;/* borde gris suave */
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.noticia-card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.color-blanco-text {
+    color: #ffffff; /* Cambia el color del texto*/
+}
+
+.montserrat-personal {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barra-horizontal {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background-color: #211F29;
+  padding: 10px 0;
+}
+
+.menu-horizontal {
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  gap: 40px; /* Espacio entre botones */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-login-registro {
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  gap: 10px; /* Espacio entre botones */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.barra-horizontal ul {
+  display: flex; /* Muestra los <li> en línea */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.fila-superior {
+    background-color: #141318; /* un tono diferente */
+    min-height: 150px; /* altura de la fila superior */
+}
+
+.fila-intermedia {
+    background-color: #141318;
+    border-top: 5px solid #211F29;
+    border-bottom: 5px solid #211F29;
+    min-height: 100px;
+}
+.fila-inferior {
+    background-color: #141318; /* mismo color del fondo */
+    min-height: calc(100vh - 250px); /* ocupa el resto */
+}
+
+
+.fila-catalogo {
+    background-color: #141318; /* mismo color del fondo */
+    min-height: calc(100% - 250px); /* ocupa el resto vertical */
+    width: 100vw; /* ocupa todo el ancho de la pantalla */
+    overflow-x: auto; /* scroll horizontal si es necesario */
+}
+
+
+
+/* Botones
+    Orden:
+    - Boton de Filtro
+    - Boton de ...
+*/
+.btn-lms-filtro {
+    --bs-btn-color: #ffc600;
+    --bs-btn-bg: #211F29;
+    --bs-btn-border-color: #ab7d7d;
+    --bs-btn-hover-color: #ffc600;
+    --bs-btn-hover-bg: #211F29;
+    --bs-btn-hover-border-color: #ab7d7d;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #ab7d7d;
+    --bs-btn-active-bg: #211F29;
+    --bs-btn-active-border-color: #AC7D7D;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #211F29;
+    --bs-btn-disabled-border-color: #ffc600;
+
+    /* Tamaño visual */
+    font-size: 1.1rem;       /* Aumenta el tamaño del texto */
+    padding: 12px 24px;      /* Más espacio interno */
+    min-width: 140px;        /* Ancho mínimo opcional */
+    border-radius: 6px;      /* Bordes más suaves */
+
+}
+
+.btn-lms-buscar {
+    --bs-btn-color: #ffc600;
+    --bs-btn-bg: #211F29;
+    --bs-btn-border-color: #ab7d7d;
+    --bs-btn-hover-color: #ffc600;
+    --bs-btn-hover-bg: #211F29;
+    --bs-btn-hover-border-color: #ab7d7d;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #ab7d7d;
+    --bs-btn-active-bg: #211F29;
+    --bs-btn-active-border-color: #AC7D7D;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #211F29;
+    --bs-btn-disabled-border-color: #ffc600;
+    border-radius: 0px; 
+}
+
+
+.btn-lms-acceso {
+    --bs-btn-color: #ecc039;
+    --bs-btn-bg: #211F29;
+    --bs-btn-border-color: #ab7d7d;
+    --bs-btn-hover-color: #ffc600;
+    --bs-btn-hover-bg: #211F29;
+    --bs-btn-hover-border-color: #ab7d7d;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #ab7d7d;
+    --bs-btn-active-bg: #211F29;
+    --bs-btn-active-border-color: #AC7D7D;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #211F29;
+    --bs-btn-disabled-border-color: #ecc039;
+
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    min-width: 140px;
+    border-radius: 12px;
+}
+
+
