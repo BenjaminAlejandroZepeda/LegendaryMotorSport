@@ -8,6 +8,24 @@
 /* Estilo Letra Montserrat */
 
 
+.noticia-card {
+  background-color: #211F29; /* gris claro */
+  border: 1px solid #ffc600;/* borde gris suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.noticia-card .btn-outline-warning {
+  border: 2px solid #ffc107;
+  background-color: #211F29;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.color-blanco-text {
+    color: #ffffff; /* Cambia el color del texto*/
+}
 
 .montserrat-personal {
   font-family: "Montserrat", sans-serif;
@@ -56,6 +74,7 @@
     background-color: #141318; /* un tono diferente */
     min-height: 150px; /* altura de la fila superior */
 }
+
 .fila-intermedia {
     background-color: #141318;
     border-top: 5px solid #211F29;
@@ -66,6 +85,8 @@
     background-color: #141318; /* mismo color del fondo */
     min-height: calc(100vh - 250px); /* ocupa el resto */
 }
+
+
 
 /* Botones
     Orden:
@@ -111,10 +132,7 @@
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #211F29;
     --bs-btn-disabled-border-color: #ffc600;
-    border-radius: 0px;
-
-
-    
+    border-radius: 0px; 
 }
 
 
@@ -139,3 +157,5 @@
     min-width: 140px;
     border-radius: 12px;
 }
+
+
