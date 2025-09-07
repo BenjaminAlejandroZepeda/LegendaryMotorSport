@@ -11,9 +11,18 @@
 .noticia-card {
   background-color: #211F29; /* gris claro */
   border: 1px solid #ffc600;/* borde gris suave */
+
   border-radius: 5px;
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.noticia-card .btn-outline-warning {
+  border: 2px solid #ffc107;
+  background-color: #211F29;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 
@@ -23,6 +32,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 
 
 .color-blanco-text {
@@ -84,15 +94,12 @@
     min-height: calc(100vh - 250px); /* ocupa el resto */
 }
 
-
 .fila-catalogo {
     background-color: #141318; /* mismo color del fondo */
     min-height: calc(100% - 250px); /* ocupa el resto vertical */
     width: 100vw; /* ocupa todo el ancho de la pantalla */
     overflow-x: auto; /* scroll horizontal si es necesario */
 }
-
-
 
 /* Botones
     Orden:
