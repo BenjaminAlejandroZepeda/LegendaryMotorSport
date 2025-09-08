@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Legendary Motorsport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body class="fondo">
+<!-- Header -->
+<header class="fila-superior container-fluid p-4">
+    <div class="row align-items-center">
+    <!-- Logo  -->
+    <div class="col-12 col-md-2 text-center mb-2 mb-md-0">
+            <a href="index.html">
+                <img src="https://i.imgur.com/fSh82xM.png" class="img-fluid" alt="Logo Legendary" width="100%" height="25%">
+            </a>
+    </div>
+      <!-- Botones de login -->
+      <div class="col-12 d-flex justify-content-end mt-2">
+        <div class="d-flex flex-row flex-wrap gap-2">
+            <!-- Botón para abrir el modal -->
+              <button id="btnRegistro" type="button" class="btn btn-lms-acceso" data-bs-toggle="modal" data-bs-target="#registroModal">
+                Registrarse
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                            <h5 class="modal-title" id="registroModalLabel">Formulario de Registro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                            <form id="formRegistro">
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">Usuario</label>
+                                <input type="text" class="form-control" id="usuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contraseña" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contraseña" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidoP" class="form-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="apellidoP" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidoM" class="form-label">Apellido Materno</label>
+                                <input type="text" class="form-control" id="apellidoM" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccion" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Registrar</button>
+                            </form>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+            <!-- Botón de inicio de sesión -->
+            <button id="btnLogin" type="button" class="btn btn-lms-acceso" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Iniciar sesión
+            </button>
+
+            <!-- Botón de perfil (oculto por defecto) -->
+            <a id="btnPerfil" href="MiPerfil.html" class="btn btn-lms-acceso d-none">
+            Mi Perfil
+            </a>
+
+            <!-- Modal de Login -->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                      <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                      <form id="formLogin">
+                      <div class="mb-3">
+                          <label for="loginUsuario" class="form-label">Usuario</label>
+                          <input type="text" class="form-control" id="loginUsuario" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="loginContraseña" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="loginContraseña" required>
+                      </div>
+                      <button type="submit" class="btn btn-lms-filtro">Ingresar</button>
+                      </form>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+</header>
+<main class="my-2">
+   <!-- Barra de enlaces -->
+    <div class="col-12 col-md-auto">
+      <nav>
+          <div class="d-flex flex-row flex-wrap justify-content-start gap-2 overflow-auto px-2">
+
+            <div class="flex-shrink-0">
+              <a href="Vehiculos.html"><button class="btn btn-sm btn-lms-filtro">Catalogo ▼</button></a>
+            </div>
+            <div class="flex-shrink-0">
+               <a href="Carrito.html"><button class="btn btn-sm btn-lms-filtro">Carrito ▼</button></a>
+            </div>
+            <div class="flex-shrink-0">
+              <button type="button" class="btn btn-lms-filtro" data-bs-toggle="modal" data-bs-target="#exampleModal">Soporte y Contacto ▼</button>
+            </div>
+            <div class="flex-shrink-0">
+               <button type="button" class="btn btn-lms-filtro" data-bs-toggle="modal" data-bs-target="#modalFull">Acerca de Nosotros ▼</button>
+            </div>
+            <div class="flex-shrink-0">
+               <a href="Mapa.html"><button class="btn btn-sm btn-lms-filtro">Mapa de Ubicaciones ▼</button></a>
+            </div>
+      </nav>
+      <div class="my-2"></div>
+    </div>
+    
+ <!-- Articulo 1 -->
+  <article class="fila-inferior py-2">
+    <div class="contenedor-cartas d-flex flex-row flex-nowrap overflow-auto px-2 col-lg-12 ">
+        <!-- carta 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+        <!-- carta 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+        <!-- carta 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+        <!-- carta 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+    </div>
+  </article>
+  <!-- Articulo 2 -->
+  <article class="fila-inferior py-2">
+    <div class="contenedor-cartas d-flex flex-row flex-nowrap overflow-auto px-2 col-lg-12 ">
+        <!-- carta 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+        <!-- carta 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+        <!-- carta 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+        <!-- carta 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+          <div class="card noticia-card m-2" style="width: 18rem;">
+            <img src="https://images7.alphacoders.com/853/thumb-1920-853405.jpg" class="card-img-top" alt="Noticia">
+              <div class="card-body">
+                <h5 class="card-title color-blanco-text" >Noticia de la semana</h5>
+                <p class="card-text color-blanco-text">Nuevo auto llega a los santos</p>
+                <a href="#" class="btn btn-sm btn-lms-buscar">Ver</a>
+              </div>
+          </div>
+        </div>
+    </div>
+  </article>
+
+
+<!-- Footer -->
+<footer class="g-dark text-white py-4 m-2 p-4">
+  <p class="mb-3">&copy; 2025 Legendary Motorsport. Todos los derechos reservados.</p>
+  <nav>  
+    <ul class="">
+
+      <li>
+            <!-- Button trigger modal -->
+        <div type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <u style="color: #00aae4;">Nuestro Contacto</u>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-color: #ab7d7d; background-color: #141318; color: #ffc600;">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuestro Contacto</h1>
+                    </div>
+                    <div class="modal-body" style="border-color: #ab7d7d; background-color: #141318; color: #ffffff;">
+                        <ul>
+                            <strong>
+                                <li>
+                                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Logo Mail" width="25" height="25"> 
+                                    <a href="https://www.youtube.com/c/Hern%C3%A1nSaavedra/featured">
+                                        legendary@Motorsport.ls
+                                    </a>
+                                </li>
+                                <li>
+                                    <img src="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icono-de-instagram-colorido.png" alt="Logo Instagram" width="25" height="25"> 
+                                    <a href="https://www.youtube.com/c/Hern%C3%A1nSaavedra/featured">
+                                        Instagram.com/legendarymotors/
+                                    </a>
+                                </li>
+                                <li> 
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Logo Whatsapp" width="25" height="25">
+                                    <a href="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icono-de-instagram-colorido.png">
+                                      +56 999335479 
+                                    </a>
+                                </li>
+                            </strong>
+                        </ul>
+                    </div>
+                    <div class="modal-footer" style="border-color: #ab7d7d; background-color: #141318; color: #ffffff;">
+                        <button type="button" class="btn btn-lms-filtro" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </li>
+      
+      <li>
+        <div type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFull">
+          <u style="color: #00aae4;">Sobre Nosotros</u>
+        </div>
+
+        <div class="modal fade" id="modalFull" tabindex="-1" aria-labelledby="modalFullLabel" aria-hidden="true" style="background-color: black;">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between" style="color: #FFFFFF; background-color: #141318;">
+                    <h5 class="modal-title" id="modalFullLabel">Sobre Nosotros</h5>
+                    <button type="button" class="btn btn-lms-filtro" data-bs-dismiss="modal" aria-label="Cerrar">Cerrar</button>
+                </div>
+                <div class="modal-body" style="color: #FFFFFF; background-color: #141318; border-color: #ab7d7d; border: 2px;">
+                    
+                    <section class="container-fluid border-top border-5 border-white d-inline-block">
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 p-4">
+                                <h2 style="color: #FFFFFF;">🏎️ Introducción: </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="row justifiy-content-center">
+                            <div class="col-12 col-md-12 mb-2 text-final p-4" style="color: #FFFFFF;">
+                                <p>
+                                    <strong style="color: #ffc600;">Legendary Motorsport</strong> es una tienda virtual de alta gama especializada en la venta de <strong style="color: #ffc600;">vehículos de lujo, deportivos y clásicos</strong>, diseñada para satisfacer las exigencias de quienes entienden que conducir es mucho más que trasladarse: <strong> <em>es una declaración de estilo, poder y distinción.</em></strong>
+                                    Con <strong style="color: #ffc600;">más de 37 años de trayectoria</strong>, nos hemos consolidado como el referente principal en el mercado automotriz de alto rendimiento en <strong>Los Santos</strong>, operando desde ubicaciones estratégicas como:
+                                </p>
+                                <ul style="color: #FFFFFF;">
+                                    <strong>
+                                        <li>Avenida Strawberry</li>
+                                        <li>Centro Comercial Burton</li>
+                                        <li>La Mesa</li>
+                                        <li>Mission Row</li>
+                                    </strong>
+                                </ul>
+                                <p>
+                                    Nuestra reputación se ha forjado sobre <strong>tres pilares fundamentales:</strong> 
+                                </p>
+                                <ul style="color: #FFFFFF;">
+                                    <strong>
+                                        <li>Exclusividad</li>
+                                        <li>Potencia</li>
+                                        <li>Diseño</li>
+                                    </strong>
+                                </ul>
+                                <p>Cada vehículo que ofrecemos ha sido cuidadosamente seleccionado por su capacidad de transformar el desplazamiento cotidiano en una experiencia de <strong style="color: #ffc600;">prestigio y adrenalina</strong>. Desde los deportivos más agresivos hasta los clásicos más refinados, cada modelo representa una fusión perfecta entre ingeniería de vanguardia y estética imponente. En <strong style="color: #ffc600;">Legendary Motorsport</strong>, no solo vendemos autos: entregamos símbolos de estatus, precisión y carácter. Nuestro catálogo está compuesto por las marcas más reconocidas y deseadas del mundo automotriz, con modelos que han marcado época y redefinido los estándares de velocidad y lujo. Nos dirigimos a quienes buscan destacar, a quienes entienden que la verdadera elegancia se mide en revoluciones por minuto.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="container-fluid border-top border-bottom border-5 border-white d-inline-block" >
+                        <div class="row justify-content-center">
+                            <div class="col-12 p-4">
+                                <h2 style="color: #FFFFFF;">💰 Misión: </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="row justifiy-content-center">
+                            <div class="col-12 col-md-12 mb-2 text-final p-4" style="color: #FFFFFF;">
+                                <p><strong style="color: #FFFFFF;">Nuestra misión</strong> es llevar el lujo, la velocidad y el poder directamente a las calles de <strong>Los Santos</strong>, ofreciendo vehículos que no solo cumplen con los más altos estándares de rendimiento, sino que también elevan la experiencia de conducción a un nivel superior. Nos comprometemos a conectar a nuestros clientes con lo más selecto del automovilismo, promoviendo una cultura de excelencia, innovación y adrenalina sobre ruedas.
+
+                                    Cada entrega es una declaración de prestigio, diseñada para quienes no solo quieren llegar, sino hacerlo con presencia. Nos esforzamos por ofrecer un servicio personalizado, asesorando a cada cliente en la elección del vehículo que mejor se adapte a su estilo de vida, sus aspiraciones y su personalidad. En <strong style="color: #ffc600;">Legendary Motorsport</strong>, cada compra es una inversión en poder, elegancia y exclusividad.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="container-fluid border-bottom border-5 border-white d-inline-block">
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 p-4">
+                                <h2 style="color: #FFFFFF;">📍 Nuestro compromiso: </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="row justifiy-content-center">
+                            <div class="col-12 col-md-12 mb-2 text-final p-4" style="color: #FFFFFF;">
+                                <p>
+                                    En <strong style="color: #ffc600;">Legendary Motorsport</strong>, entendemos que cada cliente busca algo más que un medio de transporte: busca una extensión de su identidad. Por eso, trabajamos con las marcas más prestigiosas y los modelos más codiciados, garantizando una experiencia de compra fluida, segura y adaptada a los gustos más exigentes. Nuestro equipo de expertos está capacitado para ofrecer asesoría integral, desde la selección del vehículo hasta su entrega, asegurando que cada detalle esté alineado con las expectativas del cliente.
+
+                                    Ya sea que busques dominar la autopista, destacar en el centro financiero o recorrer la costa con estilo, <strong style="color: #ffc600;">Legendary Motorsport</strong> es tu punto de partida hacia una nueva forma de vivir la conducción. Porque entendemos que el verdadero lujo no está solo en el vehículo, sino en la experiencia que lo rodea.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+                </div>
+            </div>
+        </div>
+      </li>
+      <li>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registroModal">
+          <u style="color: #00aae4;">¿No tienes cuenta? Registrate</u>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  <!-- Enlace al JS -->
+    <script src="JS/Login.js"></script>
+    <script src="JS/Registro.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+
