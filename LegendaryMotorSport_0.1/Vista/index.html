@@ -20,8 +20,94 @@
       <!-- Botones de login -->
       <div class="col-12 d-flex justify-content-end mt-2">
         <div class="d-flex flex-row flex-wrap gap-2">
-            <a href="Login.html"><button class="btn btn-sm btn-lms-acceso">Iniciar sesión ▼</button></a>
-            <a href="Registro.html"><button class="btn btn-sm btn-lms-acceso">Registrarse ▼</button></a>
+            <<!-- Botón para abrir el modal -->
+              <button id="btnRegistro" type="button" class="btn btn-lms-acceso" data-bs-toggle="modal" data-bs-target="#registroModal">
+                Registrarse
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                            <h5 class="modal-title" id="registroModalLabel">Formulario de Registro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                            <form id="formRegistro">
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">Usuario</label>
+                                <input type="text" class="form-control" id="usuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contraseña" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contraseña" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidoP" class="form-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="apellidoP" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidoM" class="form-label">Apellido Materno</label>
+                                <input type="text" class="form-control" id="apellidoM" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccion" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Registrar</button>
+                            </form>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+            <!-- Botón de inicio de sesión -->
+            <button id="btnLogin" type="button" class="btn btn-lms-acceso" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Iniciar sesión
+            </button>
+
+            <!-- Botón de perfil (oculto por defecto) -->
+            <a id="btnPerfil" href="MiPerfil.html" class="btn btn-lms-acceso d-none">
+            Mi Perfil
+            </a>
+
+            <!-- Modal de Login -->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                      <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body" style="border-color: #ab7d7d; color: #ffc600; background-color: #141318;">
+                      <form id="formLogin">
+                      <div class="mb-3">
+                          <label for="loginUsuario" class="form-label">Usuario</label>
+                          <input type="text" class="form-control" id="loginUsuario" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="loginContraseña" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="loginContraseña" required>
+                      </div>
+                      <button type="submit" class="btn btn-lms-filtro">Ingresar</button>
+                      </form>
+                  </div>
+                  </div>
+              </div>
+            </div>
         </div>
       </div>
 </header>
@@ -47,16 +133,12 @@
             <div class="flex-shrink-0">
                <a href="Mapa.html"><button class="btn btn-sm btn-lms-filtro">Mapa de Ubicaciones ▼</button></a>
             </div>
-
-            <div class="flex-shrink-0">
-             <a href="Favoritos.html"><button class="btn btn-sm btn-lms-filtro">Lista de favoritos ▼</button></a>
-          </div>
       </nav>
       <div class="my-2"></div>
     </div>
  <!-- Articulo 1 -->
   <article class="fila-inferior py-2">
-    <div class="contenedor-cartas d-flex flex-row flex-nowrap overflow-auto px-2 col-lg-12 ">
+    <div class="contenedor-cartas d-flex flex-row flex-wrap overflow-auto px-2 col-lg-12 ">
         <!-- carta 1 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
           <div class="card noticia-card m-2" style="width: 18rem;">
@@ -105,7 +187,7 @@
   </article>
   <!-- Articulo 2 -->
   <article class="fila-inferior py-2">
-    <div class="contenedor-cartas d-flex flex-row flex-nowrap overflow-auto px-2 col-lg-12 ">
+    <div class="contenedor-cartas d-flex flex-row flex-wrap overflow-auto px-2 col-lg-12 ">
         <!-- carta 1 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
           <div class="card noticia-card m-2" style="width: 18rem;">
@@ -155,7 +237,7 @@
 
 </main>
 
-<footer class="g-dark text-white py-4 m-2">
+<footer class="g-dark text-white py-4 m-2 p-4">
   <p class="mb-3">&copy; 2025 Legendary Motorsport. Todos los derechos reservados.</p>
   <nav>  
     <ul class="ist-inline">
@@ -299,11 +381,19 @@
             </div>
         </div>
       </li>
-
-        <a>¿No tienes cuenta? </a><a href="Registro.html">Registrate</a>
+      <li>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registroModal">
+          <u style="color: #00aae4;">¿No tienes cuenta? Registrate</u>
+        </button>
+      </li>
     </ul>
   </nav>
 </footer>
+
+
+  <!-- Enlace al JS -->
+    <script src="JS/Login.js"></script>
+    <script src="JS/Registro.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
