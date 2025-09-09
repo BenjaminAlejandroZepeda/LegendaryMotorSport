@@ -20,28 +20,30 @@
     </div>
 </header>
 <main class="my-2">
-    <div class="col-12 col-md-auto p-4">
-      <nav>
-          <div class="d-flex flex-row flex-wrap justify-content-start gap-2 overflow-auto px">
-            <div class="flex-shrink-0">
-              <a href="Vehiculos.html"><button class="btn btn-sm btn-lms-filtro">Catalogo ▼</button></a>
-            </div>
-            <div class="flex-shrink-0">
-               <a href="Carrito.html"><button class="btn btn-sm btn-lms-filtro">Carrito ▼</button></a>
-            </div>
-            <div class="flex-shrink-0">
-               <a href="Acerca.html"><button class="btn btn-sm btn-lms-filtro">Acerca de Nosotros ▼</button></a>
-            </div>
-            <div class="flex-shrink-0">
-               <a href="Contacto.html"><button class="btn btn-sm btn-lms-filtro">Soporte y Contacto ▼</button></a>
-            </div>
-            <div class="flex-shrink-0">
-               <a href="Mapa.html"><button class="btn btn-sm btn-lms-filtro">Mapa de Ubicaciones ▼</button></a>
-            </div>
+    
+   <!-- Barra de enlaces -->
+   <div class="col-12 col-md-auto">
+    <nav>
+        <div class="d-flex flex-row flex-wrap justify-content-start gap-2 overflow-auto px-2">
 
-      </nav>
-      <div class="my-2"></div>
-    </div>
+          <div class="flex-shrink-0">
+            <a href="Vehiculos.html"><button class="btn btn-sm btn-lms-filtro">Catalogo ▼</button></a>
+          </div>
+          <div class="flex-shrink-0">
+             <a href="Carrito.html"><button class="btn btn-sm btn-lms-filtro">Carrito ▼</button></a>
+          </div>
+          <div class="flex-shrink-0">
+            <button type="button" class="btn btn-lms-filtro" data-bs-toggle="modal" data-bs-target="#exampleModal">Soporte y Contacto ▼</button>
+          </div>
+          <div class="flex-shrink-0">
+             <button type="button" class="btn btn-lms-filtro" data-bs-toggle="modal" data-bs-target="#modalFull">Acerca de Nosotros ▼</button>
+          </div>
+          <div class="flex-shrink-0">
+             <a href="Mapa.html"><button class="btn btn-sm btn-lms-filtro">Mapa de Ubicaciones ▼</button></a>
+          </div>
+    </nav>
+    <div class="my-2"></div>
+  </div>
 <!-- Detalle vehiculo  -->
     <section>
         <div class="container mt-2 p-4">
