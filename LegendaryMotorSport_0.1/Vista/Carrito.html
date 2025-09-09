@@ -20,86 +20,248 @@
     </div>
 </header>
 <main>
-    <section>
-<h2 class="text-white mb-3">Carrito de compra</h2>
-        <div class="d-flex flex-row flex-nowrap justify-content-start gap-2 overflow-auto px">
-            <div class="row g-3" id="carrito">
-                <!-- Producto 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card " style="min-width: 250px;">
-                        <img src="https://i.blogs.es/fc6022/pegassi-zentorno/1366_2000.png" class="img-fluid" alt="Logo Legendary" width="100%" height="25%">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h6 class="card-title">Producto 1</h6>
-                                <p class="card-text mb-1"><small>Cantidad: 2</small></p>
-                                <p class="card-text"><small>Precio unitario: $50</small></p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <strong>$100</strong>
-                                <button class="btn btn-danger btn-sm">Eliminar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ----------------- -->
-                <!-- Producto 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card" style="min-width: 250px;">
-                        <img src="https://i.blogs.es/fc6022/pegassi-zentorno/1366_2000.png" class="img-fluid" alt="Logo Legendary" width="100%" height="25%">
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <div>
-                                <h6 class="card-title">Producto 1</h6>
-                                <p class="card-text mb-1"><small>Cantidad: 2</small></p>
-                                <p class="card-text"><small>Precio unitario: $50</small></p>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <strong>$100</strong>
-                                <button class="btn btn-danger btn-sm">Eliminar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="px-4">
+    <h2 class="text-white mb-3">Carrito de compra</h2>
+    <div class="d-flex flex-row flex-nowrap gap-3 overflow-auto px-2" id="carrito">
+        <!-- Producto 1 -->
+        <div class="card" style="min-width: 250px; flex: 0 0 auto;">
+        <img src="https://i.blogs.es/fc6022/pegassi-zentorno/1366_2000.png" class="card-img-top" alt="Producto 1" style="height: 150px; object-fit: contain;">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+            <h6 class="card-title">Producto 1</h6>
+            <p class="card-text mb-1"><small>Cantidad: 2</small></p>
+            <p class="card-text"><small>Precio unitario: $50</small></p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+            <strong>$100</strong>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
             </div>
         </div>
         </div>
 
-                <div class="container mt-4">
-                <div class="card p-3">
-                    <div class="row">
-                    <div class="col-12 col-md-6">
-                        <p class="mt-3 text-white">Total: <span id="total1">$0</span></p>
-                    </div>
-                    <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0">
-                        <small>Descuento: $0 <br></small>
-                        <small>IVA: $0 <br></small>
-                        <small>Impuestos: $0 <br></small>
-                        <h5>Total: <span id="total2">$0</span></h5>
-                        <button class="btn btn-success mt-2">Finalizar compra</button>
-                    </div>
-                    </div>
-                </div>
-                </div>
-
-
-                        
-
+        <!-- Producto 2 -->
+        <div class="card" style="min-width: 250px; flex: 0 0 auto;">
+        <img src="https://i.blogs.es/fc6022/pegassi-zentorno/1366_2000.png" class="card-img-top" alt="Producto 2" style="height: 150px; object-fit: contain;">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+            <h6 class="card-title">Producto 2</h6>
+            <p class="card-text mb-1"><small>Cantidad: 1</small></p>
+            <p class="card-text"><small>Precio unitario: $75</small></p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+            <strong>$75</strong>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+            </div>
         </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card" style="min-width: 250px; flex: 0 0 auto;">
+        <img src="https://i.blogs.es/fc6022/pegassi-zentorno/1366_2000.png" class="card-img-top" alt="Producto 3" style="height: 150px; object-fit: contain;">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+            <h6 class="card-title">Producto 3</h6>
+            <p class="card-text mb-1"><small>Cantidad: 3</small></p>
+            <p class="card-text"><small>Precio unitario: $30</small></p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+            <strong>$90</strong>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="card" style="min-width: 250px; flex: 0 0 auto;">
+        <img src="https://i.blogs.es/fc6022/pegassi-zentorno/1366_2000.png" class="card-img-top" alt="Producto 3" style="height: 150px; object-fit: contain;">
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+            <h6 class="card-title">Producto 3</h6>
+            <p class="card-text mb-1"><small>Cantidad: 3</small></p>
+            <p class="card-text"><small>Precio unitario: $30</small></p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+            <strong>$90</strong>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+    <!-- Resumen -->
+    <div class="container mt-4">
+        <div class="card p-3 bg-dark text-white">
+        <div class="row">
+            <div class="col-12 col-md-6">
+            </div>
+            <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0">
+            <small>Descuento: $0 <br></small>
+            <small>IVA: $0 <br></small>
+            <small>Impuestos: $0 <br></small>
+            <h5>Total: <span id="total2">$265</span></h5>
+            <button class="btn btn-success mt-2">Finalizar compra</button>
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
 
 </main>
-<!-- Footer  -->
-<footer class="g-dark text-white py-4 mt-2">
-  <p class="mb-3">&copy; 2025 Legendary Motorsport. Todos los derechos reservados.</p>
-  <nav>  
-    <ul class="ist-inline">
-      <a href="Contacto.html">Contacto</a>
-      <div class="my-2"></div>
-      <a href="Acerca.html">Acerca de Motorsport</a>
-      <div class="my-2"></div>
-      <a>¿No tienes cuenta? </a><a href="Registro.html">Registrate</a>
-    </ul>
-  </nav>
-</footer>
+
+<!-- Footer -->
+<footer class="g-dark text-white py-4 m-2 p-4">
+    <p class="mb-3">&copy; 2025 Legendary Motorsport. Todos los derechos reservados.</p>
+    <nav>  
+      <ul class="">
+  
+        <li>
+              <!-- Button trigger modal -->
+          <div type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <u style="color: #00aae4;">Nuestro Contacto</u>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header" style="border-color: #ab7d7d; background-color: #141318; color: #ffc600;">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuestro Contacto</h1>
+                      </div>
+                      <div class="modal-body" style="border-color: #ab7d7d; background-color: #141318; color: #ffffff;">
+                          <ul>
+                              <strong>
+                                  <li>
+                                      <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Logo Mail" width="25" height="25"> 
+                                      <a href="https://www.youtube.com/c/Hern%C3%A1nSaavedra/featured">
+                                          legendary@Motorsport.ls
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <img src="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icono-de-instagram-colorido.png" alt="Logo Instagram" width="25" height="25"> 
+                                      <a href="https://www.youtube.com/c/Hern%C3%A1nSaavedra/featured">
+                                          Instagram.com/legendarymotors/
+                                      </a>
+                                  </li>
+                                  <li> 
+                                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Logo Whatsapp" width="25" height="25">
+                                      <a href="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icono-de-instagram-colorido.png">
+                                        +56 999335479 
+                                      </a>
+                                  </li>
+                              </strong>
+                          </ul>
+                      </div>
+                      <div class="modal-footer" style="border-color: #ab7d7d; background-color: #141318; color: #ffffff;">
+                          <button type="button" class="btn btn-lms-filtro" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </li>
+        
+        <li>
+          <div type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFull">
+            <u style="color: #00aae4;">Sobre Nosotros</u>
+          </div>
+  
+          <div class="modal fade" id="modalFull" tabindex="-1" aria-labelledby="modalFullLabel" aria-hidden="true" style="background-color: black;">
+              <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                  <div class="modal-header d-flex justify-content-between" style="color: #FFFFFF; background-color: #141318;">
+                      <h5 class="modal-title" id="modalFullLabel">Sobre Nosotros</h5>
+                      <button type="button" class="btn btn-lms-filtro" data-bs-dismiss="modal" aria-label="Cerrar">Cerrar</button>
+                  </div>
+                  <div class="modal-body" style="color: #FFFFFF; background-color: #141318; border-color: #ab7d7d; border: 2px;">
+                      
+                      <section class="container-fluid border-top border-5 border-white d-inline-block">
+  
+                          <div class="row justify-content-center">
+                              <div class="col-12 p-4">
+                                  <h2 style="color: #FFFFFF;">🏎️ Introducción: </h2>
+                              </div>
+                          </div>
+                          
+                          <div class="row justifiy-content-center">
+                              <div class="col-12 col-md-12 mb-2 text-final p-4" style="color: #FFFFFF;">
+                                  <p>
+                                      <strong style="color: #ffc600;">Legendary Motorsport</strong> es una tienda virtual de alta gama especializada en la venta de <strong style="color: #ffc600;">vehículos de lujo, deportivos y clásicos</strong>, diseñada para satisfacer las exigencias de quienes entienden que conducir es mucho más que trasladarse: <strong> <em>es una declaración de estilo, poder y distinción.</em></strong>
+                                      Con <strong style="color: #ffc600;">más de 37 años de trayectoria</strong>, nos hemos consolidado como el referente principal en el mercado automotriz de alto rendimiento en <strong>Los Santos</strong>, operando desde ubicaciones estratégicas como:
+                                  </p>
+                                  <ul style="color: #FFFFFF;">
+                                      <strong>
+                                          <li>Avenida Strawberry</li>
+                                          <li>Centro Comercial Burton</li>
+                                          <li>La Mesa</li>
+                                          <li>Mission Row</li>
+                                      </strong>
+                                  </ul>
+                                  <p>
+                                      Nuestra reputación se ha forjado sobre <strong>tres pilares fundamentales:</strong> 
+                                  </p>
+                                  <ul style="color: #FFFFFF;">
+                                      <strong>
+                                          <li>Exclusividad</li>
+                                          <li>Potencia</li>
+                                          <li>Diseño</li>
+                                      </strong>
+                                  </ul>
+                                  <p>Cada vehículo que ofrecemos ha sido cuidadosamente seleccionado por su capacidad de transformar el desplazamiento cotidiano en una experiencia de <strong style="color: #ffc600;">prestigio y adrenalina</strong>. Desde los deportivos más agresivos hasta los clásicos más refinados, cada modelo representa una fusión perfecta entre ingeniería de vanguardia y estética imponente. En <strong style="color: #ffc600;">Legendary Motorsport</strong>, no solo vendemos autos: entregamos símbolos de estatus, precisión y carácter. Nuestro catálogo está compuesto por las marcas más reconocidas y deseadas del mundo automotriz, con modelos que han marcado época y redefinido los estándares de velocidad y lujo. Nos dirigimos a quienes buscan destacar, a quienes entienden que la verdadera elegancia se mide en revoluciones por minuto.</p>
+                              </div>
+                          </div>
+                      </section>
+  
+                      
+                      <section class="container-fluid border-top border-bottom border-5 border-white d-inline-block" >
+                          <div class="row justify-content-center">
+                              <div class="col-12 p-4">
+                                  <h2 style="color: #FFFFFF;">💰 Misión: </h2>
+                              </div>
+                          </div>
+                          
+                          <div class="row justifiy-content-center">
+                              <div class="col-12 col-md-12 mb-2 text-final p-4" style="color: #FFFFFF;">
+                                  <p><strong style="color: #FFFFFF;">Nuestra misión</strong> es llevar el lujo, la velocidad y el poder directamente a las calles de <strong>Los Santos</strong>, ofreciendo vehículos que no solo cumplen con los más altos estándares de rendimiento, sino que también elevan la experiencia de conducción a un nivel superior. Nos comprometemos a conectar a nuestros clientes con lo más selecto del automovilismo, promoviendo una cultura de excelencia, innovación y adrenalina sobre ruedas.
+  
+                                      Cada entrega es una declaración de prestigio, diseñada para quienes no solo quieren llegar, sino hacerlo con presencia. Nos esforzamos por ofrecer un servicio personalizado, asesorando a cada cliente en la elección del vehículo que mejor se adapte a su estilo de vida, sus aspiraciones y su personalidad. En <strong style="color: #ffc600;">Legendary Motorsport</strong>, cada compra es una inversión en poder, elegancia y exclusividad.
+                                  </p>
+                              </div>
+                          </div>
+                      </section>
+  
+                      <section class="container-fluid border-bottom border-5 border-white d-inline-block">
+  
+                          <div class="row justify-content-center">
+                              <div class="col-12 p-4">
+                                  <h2 style="color: #FFFFFF;">📍 Nuestro compromiso: </h2>
+                              </div>
+                          </div>
+                          
+                          <div class="row justifiy-content-center">
+                              <div class="col-12 col-md-12 mb-2 text-final p-4" style="color: #FFFFFF;">
+                                  <p>
+                                      En <strong style="color: #ffc600;">Legendary Motorsport</strong>, entendemos que cada cliente busca algo más que un medio de transporte: busca una extensión de su identidad. Por eso, trabajamos con las marcas más prestigiosas y los modelos más codiciados, garantizando una experiencia de compra fluida, segura y adaptada a los gustos más exigentes. Nuestro equipo de expertos está capacitado para ofrecer asesoría integral, desde la selección del vehículo hasta su entrega, asegurando que cada detalle esté alineado con las expectativas del cliente.
+  
+                                      Ya sea que busques dominar la autopista, destacar en el centro financiero o recorrer la costa con estilo, <strong style="color: #ffc600;">Legendary Motorsport</strong> es tu punto de partida hacia una nueva forma de vivir la conducción. Porque entendemos que el verdadero lujo no está solo en el vehículo, sino en la experiencia que lo rodea.
+                                  </p>
+                              </div>
+                          </div>
+                      </section>
+  
+  
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registroModal">
+            <u style="color: #00aae4;">¿No tienes cuenta? Registrate</u>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
